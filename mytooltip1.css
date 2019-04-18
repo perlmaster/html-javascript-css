@@ -1,0 +1,80 @@
+/* Usage:
+<a class="tooltip" href="#">SOME TEXT<span>TOOLTIP TEXT</span></a>
+
+*/
+
+a.tooltip {
+    border-bottom: 1px dashed brown;
+    text-decoration: none;
+}
+
+a.tooltip:hover {
+    position: relative;
+}
+
+a.tooltip span {
+    display: none;
+}
+
+a.tooltip:hover span {
+    display: block;
+    min-width: 10em;
+    max-width: 15em;
+    position: absolute; top: 10px; left: 0;
+    /* formatting only styles */
+    padding: 5px; margin: 10px; z-index: 100;
+    background: #f0f0f0; border: 1px dotted #c0c0c0;
+    opacity: 0.9;
+    /* end formatting */;
+}
+
+a.tooltip2 {
+    border-bottom: 2px solid black;
+    text-decoration: none;
+}
+
+a.tooltip2:hover {
+    position: relative;
+}
+
+a.tooltip2 span {
+    display: none;
+}
+
+a.tooltip2:hover span {
+    display: block;
+    min-width: 10em;
+    max-width: 15em;
+    position: absolute; top: 10px; left: 0;
+    /* formatting only styles */
+    padding: 5px; margin: 10px; z-index: 100;
+    background: #f0f0f0; border: 2px solid #a0a0a0;
+    opacity: 0.9;
+    /* end formatting */;
+}
+
+
+a.tooltip3 {
+    border-bottom: 3px solid red;
+    text-decoration: none;
+}
+
+a.tooltip3:hover {
+    position: relative;
+}
+
+a.tooltip3 span {
+    display: none;
+}
+
+a.tooltip3:hover span {
+    display: block;
+    min-width: 10em;
+    max-width: 15em;
+    position: absolute; top: 10px; left: 0;
+    /* formatting only styles */
+    padding: 5px; margin: 10px; z-index: 100;
+    background: #f0f0f0; border: 3px dashed #808080;
+    opacity: 0.9;
+    /* end formatting */;
+}

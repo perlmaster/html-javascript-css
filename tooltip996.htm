@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>CSS TOOL TIP</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<style type="text/css">
+span.link {
+    	position: relative;
+}
+
+span.link a span {
+    	display: none;
+}
+
+span.link a:hover {
+    	font-size: 99%;
+    	font-color: #000000;
+}
+
+span.link a:hover span {
+    display: block;
+    	position: absolute;
+    	margin-top: 10px;
+    	margin-left: -10px;
+	    width: 175px; padding: 5px;
+    	z-index: 100;
+    	color: #000000;
+    	background: #FFFFAA;
+    	font: 12px "Arial", sans-serif;
+    	text-align: left;
+    	text-decoration: none;
+	border: 1px solid #000000;
+}
+</style>
+
+</head>
+<body>
+<span class="link">
+<a href="javascript: void(0)"><font face=verdana,arial,helvetica size=2>Help me!</font>
+<span><IMG src="info.gif"><BR>Here is <U>where</U> you can get all kinds of <B>bold</B> help!<br>
+<br>Just read through our handy dandy instructions.
+We are super-duper helpers and we've written the most helpful tips that you will ever see.
+You will love our tips.<br><br>And we're nice people too!
+</span></a></span>
+<BR>
+<span class="link">
+<a href="javascript: void(0)"><font face=verdana,arial,helvetica size=2>Help me now please if you can!</font>
+<span><IMG src="info.gif"><BR>Right here is <U>where</U> you can get all kinds of <B>bold</B> help!<br>
+<br>Just read through our handy dandy instructions.
+We are super-duper helpers and we've written the most helpful tips that you will ever see.
+You will love our tips.<br><br>And we're nice people too!
+</span></a></span>
+
+</body>
+</html>

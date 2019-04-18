@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<TITLE>Divider Test 2</TITLE>
+<script type="text/javascript">
+function goto_line()
+{
+	var name;
+	var line = document.getElementById('line_number').value;
+	if ( line.search(/^[0-9][0-9]*$/) >= 0 ) {
+		name = "line" + line;
+		document.getElementById(name).focus();
+	}
+	else {
+		alert("Invalid line number.");
+	}
+}
+</script>
+</HEAD>
+
+<BODY>
+
+<H1>Divider Test 2</H1>
+
+<INPUT type="text" id="line_number" name="line_number" size="5" value='?'>
+<INPUT TYPE="button" id='goto' name='goto' onclick="goto_line();" value='Goto Line'>
+<BR><BR>
+
+<div style="width:500px;height:100px;overflow:auto;border-style:solid;border-width:2px">
+<input type="text" id='line1' name='line1' value='1' size='4' readonly>
+This is divider text<BR>
+<input type="text" id='line2' name='line2' value='2' size='4' readonly>
+more text<BR>
+<input type="text" id='line3' name='line3' value='3' size='4' readonly>
+more stuff<BR>
+<input type="text" id='line4' name='line4' value='4' size='4' readonly>
+junk<BR>
+<input type="text" id='line5' name='line5' value='5' size='4' readonly>
+foobar<BR>
+<input type="text" id='line6' name='line6' value='6' size='4' readonly>
+snafu<BR>
+<input type="text" id='line7' name='line7' value='7' size='4' readonly>
+hello<BR>
+<input type="text" id='line8' name='line8' value='8' size='4' readonly>
+out<BR>
+<input type="text" id='line9' name='line9' value='9' size='4' readonly>
+there<BR>
+<input type="text" id='line10' name='line10' value='10' size='4' readonly>
+party<BR>
+<input type="text" id='line11' name='line11' value='11' size='4' readonly>
+time<BR>
+<input type="text" id='line12' name='line12' value='12' size='4' readonly>
+xmas<BR>
+<input type="text" id='line13' name='line13' value='13' size='4' readonly>
+tree<BR>
+<input type="text" id='line14' name='line14' value='14' size='4' readonly>
+dog<BR>
+<input type="text" id='line15' name='line15' value='15' size='4' readonly>
+cat<BR>
+<input type="text" id='line16' name='line16' value='16' size='4' readonly>
+lunch
+</div>
+<BR><BR>
+
+</BODY>
+
+</HTML>

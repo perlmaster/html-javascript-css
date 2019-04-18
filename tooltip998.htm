@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<TITLE>Tooltips</TITLE>
+<style type="text/css">
+
+body { font-family: Courier New, Courier, Arial; font-size: 14px; }
+.ToolText{position:relative; }
+.ToolTextHover{position:relative;}
+.ToolText span{display: none;}
+
+.ToolTextHover span{
+  display:block;
+  position:absolute;
+  border:1px solid black;
+  top:1.3em;
+  left:5px;
+  background-color:gray; color:white;
+  text-align: center;
+}
+
+.ToolText2{position:relative; }
+.ToolTextHover2{position:relative;}
+.ToolText2 span{display: none;}
+
+.ToolTextHover2 span{
+   position:absolute;
+   z-index:10;
+   top:35px;
+   left:0px;
+   width:150px;
+   display:block;
+   padding:10px;
+   background-color:#FFFFCC;
+   border:2px solid #C0C097;
+   opacity: 1.0;
+}
+
+.ToolText3{position:relative; }
+.ToolTextHover3{position:relative;}
+.ToolText3 span{display: none;}
+
+.ToolTextHover3 span{
+  display:block;
+  position:absolute;
+  border:none;
+  top:1.3em;
+  left:5px;
+  background-color:#87CEFA; color:black;
+  text-align: left;
+}
+</style>
+</HEAD>
+
+<BODY>
+<H1>Tooltips</H1>
+
+<p class="ToolText" onMouseOver="javascript:this.className='ToolTextHover'" onMouseOut="javascript:this.className='ToolText'">
+This is the text that will cause the tooltip
+<span> And this is the Tooltip's text<BR>more text</span></p>
+
+<p class="ToolText2" onMouseOver="javascript:this.className='ToolTextHover2'" onMouseOut="javascript:this.className='ToolText2'">
+This is the text that will cause the 2nd tooltip
+<span><IMG src="info.gif"><BR>And this is the 2nd Tooltip's <b>bold</b> text<BR>
+2nd line of tip</span></p>
+
+<p class="ToolText3" onMouseOver="javascript:this.className='ToolTextHover3'" onMouseOut="javascript:this.className='ToolText2'">
+This is the text that will cause the 3rd tooltip
+<span><IMG src="info.gif"><BR>And this is the 3rd Tooltip's <b>bold</b> text<BR>
+2nd line of tip</span></p>
+
+
+</BODY>
+
+</HTML>

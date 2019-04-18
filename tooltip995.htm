@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>CSS TOOL TIP</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<style type="text/css">
+a.info
+{
+position:relative; /*this is the key*/
+z-index:24;
+background-color:#ccc;
+color:#000;
+text-decoration:none
+}
+
+a.info:hover
+{
+z-index:25;
+background-color:#ff0
+}
+
+a.info span
+{
+display: none
+}
+
+a.info:hover span
+{
+/*the span will display just on :hover state*/
+display:block;
+position:absolute;
+top:2em; left:2em; width:15em;
+border:1px solid #0cf;
+background-color:#cff;
+color:#000;
+text-align: left;
+}
+</style>
+
+</head>
+<body>
+<a href="javascript:void()" class="info"> HREF TEXT
+<span>This is the tooltip. <B>bold</B><IMG src="info.gif"></span>
+</a>
+<BR><BR>
+<a href="javascript:void()" class="info"> HREF TEXT 2
+<span><IMG src="info.gif"><BR>This is a very long multi-line tooltip. I wonder what will happen to all the extra text ?</span>
+</a>
+<BR><BR>
+<a href="javascript:void()" class="info"> HREF TEXT 3
+<span>This is <B>another</B> long tooltip.</span>
+</a>
+
+</body>
+</html>

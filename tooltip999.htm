@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script type="text/javascript" src="js_tooltips.js"></script>
+<style type="text/css">
+.ttip {
+	cursor: help;
+	border-bottom: 1px dashed #000000;
+}
+.info {
+	display: none;
+	border: 1px solid #000000;
+	background-color: #FF0000;
+	padding: 2px;
+	width: 90px;
+}
+</style>
+</head>
+<body>
+	<h3>Javascript Tool-tip Examples</h3>
+
+	<p>As you can see, <span class="ttip" id="ttip1">Tool-tip #1</span>
+	will display below the text if it is near the top edge of the browser window.</p>
+
+	<p style="text-align: right;"><span class="ttip" id="ttip2">Tool-tip #2</span><br/>
+	shows that the tooltip will not pop up off the screen.</p>
+
+	<p><span class="ttip" id="ttip3">Tool-tip #3</span> shows that the tool-tip will
+	not pop up off the left edge of the browser window.</p>
+
+	<div id="tttip1" class="info">Here is the info for the first tool tip.</div>
+	<div id="tttip2" class="info">Here is the info for the second tool tip.</div>
+	<div id="tttip3" class="info">Here is the <B>bold</B> info for the third tool tip.</div>
+</body>
+</html>

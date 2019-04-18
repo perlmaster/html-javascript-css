@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>CSS TOOL TIP</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<style type="text/css">
+
+a.tooltip
+{
+   color: #666666;
+   text-decoration:none;
+}
+a.tooltip:hover
+{
+   text-decoration:underline;
+   position:relative;
+}
+
+a.tooltip span
+{
+   display:none;
+}
+
+a.tooltip:hover span
+{
+   position:absolute;
+   z-index:1;
+   top:35px;
+   left:0px;
+   width:150px;
+   display:block;
+   padding:10px;
+   background-color:#FFFFCC;
+   border:2px solid #C0C097;
+}
+
+.tooltip b
+{
+   position:absolute;
+   width:26px;
+   height:15px;
+   top:-15px;
+   left:20px;
+   background-image:url(images/tooltiparrow.gif);
+   font-size:1px;
+}
+
+.tooltip strong
+{
+   color:#333333;
+   text-align:center;
+   font:100% arial,helvetica,clean,sans-serif;
+}
+
+.tooltip p
+{
+   color:#FF8C00;
+   text-align:center;
+   font:90% arial,helvetica,clean,sans-serif;
+}
+
+</style>
+
+</head>
+<body>
+
+<a class="tooltip" href="#">This is a tooltip
+   <span><strong>Title</strong>&nbsp;<p>things to say go in here</p></span>
+</a>
+<BR><BR><BR>
+<a class="tooltip" href="#">This is another tooltip
+   <span><strong>Title</strong>&nbsp;<p>things to say go in here</p></span>
+</a>
+
+</body>
+</html>

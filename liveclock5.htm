@@ -1,0 +1,47 @@
+<HTML>
+<HEAD>
+<TITLE>Javascript Live Clock</TITLE>
+<SCRIPT language="JavaScript">
+function JSClock()
+{
+        var time = new Date();
+        var monthday = time.getDate();
+        var month = time.getMonth();
+        var year = time.getFullYear();
+        var hour = time.getHours();
+        var minute = time.getMinutes();
+        var second = time.getSeconds();
+	var dow = time.getDay();  // 0 - 6
+	var dowlist = [ "Sunday" , "Monday" , "Tuesday" , "Wednesday" , "Thurday" , "Saturday" ];
+        var temp = "" + dowlist[dow] + " " + ((hour > 12) ? hour - 12 : hour);
+        month += 1;
+        if ( month < 10 ) {
+        	month = "0" + month;
+        }
+        if ( monthday < 10 ) {
+        	monthday = "0" + monthday;
+        }
+        temp += ((minute < 10) ? ":0" : ":") + minute;
+        temp += ((second < 10) ? ":0" : ":") + second;
+        temp += (hour >= 12) ? " P.M." : " A.M.";
+        temp += " " + month + "/" + monthday + "/" + year;
+	
+        liveclock.innerHTML = "<span style='font-family: Arial; font-size:20; color:blue;'>" + temp + "</span>";
+        id = setTimeout("JSClock()",2000);
+}
+</SCRIPT>
+</HEAD>
+<BODY>
+<H2>Javascript Live Clock</H2>
+
+<div id="liveclock" name="liveclock"
+style="width: auto; float: left; border: 2px solid orange;
+padding-left: 10px; padding-right: 10px;
+padding-top: 10px; padding-bottom: 10px;"
+></div>
+<script type="text/javascript">
+	JSClock();
+</script>
+
+</BODY>
+</HTML>

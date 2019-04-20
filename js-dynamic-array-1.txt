@@ -1,0 +1,100 @@
+
+As we have assigned a value at 6th position the length of array will now be 7.
+
+Example Code
+<script language="javascript">
+var araay =  new Array();
+araay[6] = "testing array";<br>
+document.write("Size of dynamic array is - "+<b>araay.length</b>);
+&lt;/script&gt;</font>
+
+Result:
+Size of dynamic array is - 7
+
+=======================================
+
+Arrays in Javascript grow as required.
+
+var bla = new Array(3);
+bla.length == 3 //true
+bla[100] = 'something';
+bla.length == 101 //true
+
+so to add an item at the end of the array:
+
+blah[blah.length] = 'something';
+
+=======================================
+
+// iterate through an array
+var foo = new Array("a", "b", "c");   // constructor and values
+for (key in foo)
+	document.write("Element value is " + foo[key] + "<BR>\n");
+
+=======================================
+
+// iterate through an array
+var foo = new Array("a", "b", "c");   // constructor and values
+var counter;
+for (counter = 0 ; counter < foo.length ; ++counter )
+	document.write("Element value is " + foo[counter] + "<BR>\n");
+
+=======================================
+
+
+// iterate through an array
+var foo = new Array("a", "b", "c");   // constructor and values
+var counter;
+var num_elem;
+num_elem = foo.length;
+for (counter = 0 ; counter < num_elem ; ++counter )
+	document.write("Element value is " + foo[counter] + "<BR>\n");
+
+=======================================
+
+
+<script language="JavaScript">
+// An Array Indexed by Strings
+
+var states = new Array();
+
+states["CA"] = "California";
+states["ME"] = "Maine";
+states["MT"] = "Montana";
+
+for( var i in states ){
+	document.write("The index is:<em> "+ i );
+	document.write(".</em> The value is: <em>" + states[i] + ".</em><br>");
+}
+
+</script>
+
+=======================================
+
+Few people realize that you can put ASP tags inside of JavaScript blocks. The following ASP code: 
+
+
+<script language="JavaScript">
+<!--
+	<% for i = 0 to 3 %>
+		form[<%= i %>].element = "<%= i %>"
+	<% next %>
+//-->
+</script>
+
+
+will produce this code in the browser: 
+
+<script language="JavaScript">
+<!--
+
+	form[0].element = "0"
+	form[1].element = "1"
+	form[2].element = "2"
+	form[3].element = "3"
+
+//-->
+</script>
+
+=======================================
+

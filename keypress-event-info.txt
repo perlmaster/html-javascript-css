@@ -1,0 +1,8 @@
+The keypress events are generally the easiest to work with. It's not too hard to identify which key was pressed. You can get the character typed by doing: 
+
+  if (event.which == null)
+     char= String.fromCharCode(event.keyCode);    // IE
+  else if (event.which != 0 && event.charCode != 0)
+     char= String.fromCharCode(event.which);	  // All others
+  else
+     // special key

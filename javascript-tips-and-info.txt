@@ -1,0 +1,2026 @@
+http://www.webdeveloper.com/forum/forumdisplay.php?forumid=3
+
+http://www.w3schools.com/jsref/dom_obj_style.asp
+-- HTML DOM Style Object
+
+=========================================================
+
+How can I copy the text from a Javascript alert box ?
+
+What you can do, is to prompt the user with the text, and ask them to copy it. As such:
+
+prompt("Copy to clipboard: Ctrl+C, Enter", oArg.Document);
+
+Because if you supply a text to the prompt, it automatically gets selected.
+
+=========================================================
+
+<script type="text/javascript" src="my-script.js"></script>
+
+
+document.forms[0]
+document.forms["myform1"]
+document.forms["myform1"].elements["myfield1"]
+document.myform1.myfield1.value
+
+<form name="myform1" method="POST" action="xxx.cgi">
+<input onClick="return ValidateALL()" type="submit" value="Send Request">
+</form>
+
+// Return the number of forms in a document
+<p>Number of forms:
+<script type="text/javascript">
+document.write(document.forms.length);
+</script></p>
+
+// Return the name of the first form in a document
+<p>Name of first form:
+<script type="text/javascript">
+document.write(document.forms[0].name);
+</script></p>
+
+// Return the id of the first image in a document
+<p>Id of first image:
+<script type="text/javascript">
+document.write(document.images[0].id);
+</script></p>
+
+// Return the number of links in a document
+<p>Number of areas/links:
+<script type="text/javascript">
+document.write(document.links.length);
+</script></p>
+
+// Write the current date
+<script type="text/javascript">
+var d = new Date();
+document.write(d);
+</script>
+
+=========================================================
+
+var x = document.getElementById('hereweare');
+
+=========================================================
+
+// retrieve all the <a> tags in a NodeList that we called "anchorTags".
+// Then for each anchor tag (each element of the anchorTags NodeList),
+// it will alert with the value of the "href" attribute of the tag.
+
+var anchorTags = document.getElementsByTagName("a");
+for (var i = 0; i < anchorTags.length ; i++)
+{
+    alert("Href of this a element is : " + anchorTags[i].href + "\n");
+}
+
+// retieve elements by name
+var x = document.getElementsByName("x");
+for (var i = 0; i < anchorTags.length ; i++)
+{
+    z = document.getElementById(x[i].id;
+}
+
+for (var i = 0, length = envatoTutSites.length; i < length; i++) {   
+    alert(envatoTutSites[i]);   
+}  
+
+// loop over allments in a form
+for ( var i = 0 , length = document.forms["myform1"].elements.length ; i < length ; ++i) {
+  // do something here
+}
+
+=========================================================
+
+<input type="checkbox" name="Liked" value="Cool Layout">Cool Layout
+<input type="checkbox" name="Liked" value="Easy to Navigate">Easy to Navigate
+<input type="checkbox" name="Liked" value="Great Contents">Great Contents
+
+function CheckLikes() {
+
+boxes = document.f1.Liked.length
+txt = ""
+for (i = 0; i < boxes; i++) {
+  if (document.f1.Liked[i].checked) {
+    txt = txt + document.f1.Liked[i].value + " "
+  }
+}
+
+
+if (txt == "") {
+  Message = "No Boxes ticked"
+}
+else {
+  Message = ""
+}
+
+return Message
+}
+
+=========================================================
+
+// find all checkboxes in a form
+
+var inputs = document.getElementsByTagName("input"); //or document.forms[0].elements;   
+var checkboxes = []; //will contain all checkboxes   
+var checked = []; //will contain all checked checkboxes   
+for (var i = 0; i < inputs.length; i++) {   
+  if (inputs[i].type == "checkbox") {   
+    checkboxes.push(inputs[i]);   
+    if (inputs[i].checked) {   
+      checked.push(inputs[i]);   
+    }   
+  }   
+}   
+var nbcheckboxes = checkboxes.length; //number of checkboxes   
+var nbChecked = checked.length; //number of checked checkboxes
+
+=========================================================
+
+function set_all_checkboxes() {
+
+var inputs = document.getElementsByTagName("input"); //or document.forms[0].elements;
+var checkboxes = []; //will contain all checkboxes
+var checked = []; //will contain all checked checkboxes
+
+for (var i = 0; i < inputs.length; i++) {
+  if (inputs[i].type == "checkbox") {
+        inputs[i].checked = true;
+  } // IF a checkbox
+} // FOR
+
+} // end of set_all_checkboxes
+
+=========================================================
+
+function clear_all_checkboxes() {
+
+var inputs = document.getElementsByTagName("input"); //or document.forms[0].elements;
+var checkboxes = []; //will contain all checkboxes
+var checked = []; //will contain all checked checkboxes
+
+for (var i = 0; i < inputs.length; i++) {
+  if (inputs[i].type == "checkbox") {
+        inputs[i].checked = false;
+  } // IF a checkbox
+} // FOR
+
+} // end of clear_all_checkboxes
+
+=========================================================
+
+// make sure there are no empty fields in the form "myform1"
+<script type="text/javascript">
+function check_all_fields() {
+  var themessage = "You are required to complete the following fields: ";
+  var okflag = "good";
+  var sep = " ";
+  for ( var i = 0 , length = document.forms["myform1"].elements.length ; i < length ; ++i) {
+    if ( document.forms["myform1"].elements[i].value == "" ) {
+      themessage = themessage + sep + document.forms["myform1"].elements[i].name;
+      sep = " - ";
+      okflag = "bad";
+    } // IF
+  } // FOR
+  //alert if fields are empty and cancel form submit
+  if (okflag == "good") {
+    document.form.submit();
+  } // IF
+  else {
+    alert(themessage);
+    return false;
+  } // ELSE
+} // end of check_all_fields
+</script>
+
+
+<form action="some-script.pl" onsubmit="return confirm ('Are you certain you want to do this ?')">
+
+=========================================================
+
+var myString = "123456";
+
+var length = myString.length;
+
+document.write("The string is this long: " + length);
+
+// Same thing, but using the property inside the write function
+document.write("<br />The string is this long: " + myString.length);
+
+=========================================================
+
+<script language="Javascript" type="text/javascript">
+function gotolink() { 
+var destination= self.location; 
+
+for(var i = 0; i<document.formname.radiobutton.length; i++){
+  if(document.formname.radiobutton[i].checked) {
+    destination=document.formname.radiobutton[i].value }
+  }
+window.location = destination;
+}
+</script>
+
+=========================================================
+
+// check to see if a specific radio button is checked
+
+<input type="radio" name="gender" id="gender_Male" value="Male" />
+<input type="radio" name="gender" id="gender_Female" value="Female" />
+
+if(document.getElementById('gender_Male').checked) {
+    //Male radio button is checked 
+}else if(document.getElementById('gender_Female').checked) {
+    //Female is checked
+}
+
+=========================================================
+
+// Check to see if any radio button was checked
+
+var radios = document.getElementsByTagName('input');
+var value;
+for (var i = 0; i < radios.length; i++) {
+    if (radios[i].type === 'radio' && radios[i].checked) {
+    // get value, set checked flag or do whatever you need to
+      value = radios[i].value;
+    }
+} 
+
+=========================================================
+
+// Check to see if any member of a group of radio buttons is checked
+
+<input type="radio" name="offline_payment_method" value="Cheque" >
+<input type="radio" name="offline_payment_method" value="Wire Transfer" > 
+
+var off_payment_method = document.getElementsByName('offline_payment_method');
+var ischecked_method = false;
+for ( var i = 0; i < off_payment_method.length; i++) {
+  if(off_payment_method[i].checked) {
+      ischecked_method = true;
+  }
+}
+if(!ischecked_method)   {
+    //payment method button is not checked
+    alert("Please choose Offline Payment Method");
+} 
+
+=========================================================
+
+<script type="text/javascript">
+function changeContent()
+{
+var x=document.getElementById('myTable').rows[0].cells;
+x[0].innerHTML="NEW CONTENT";
+}
+</script>
+
+<input type="button" onclick="changeContent()" value="Change content">
+
+=========================================================
+
+function getCellByRowCol(rowNum, colNum)
+{
+	var tableElem = document.getElementById('tblTest');
+	var rowElem = tableElem.rows[rowNum];
+	var tdValue = rowElem.cells[colNum].innerHTML;
+	return tdValue;
+}
+document.writeln('Row 0, Col 0: ');
+document.writeln(getCellByRowCol(0,0));
+document.writeln('<br />');
+
+document.writeln('Row 0, Col 1: ');
+document.writeln(getCellByRowCol(0,1));
+document.writeln('<br />');
+
+document.writeln('Row 1, Col 0: ');
+document.writeln(getCellByRowCol(1,0));
+document.writeln('<br />');
+
+document.writeln('Row 1, Col 1: ');
+document.writeln(getCellByRowCol(1,1));
+
+=========================================================
+
+// add a row to a table
+var theTable = document.getElementById('tableId');
+theTable.tBodies[0].appendChild(document.createElement('tr'));
+
+// Adding one cell to every row in a table
+
+var theTable = document.getElementById('tableId');
+for( var x = 0; x < theTable.tHead.rows.length; x++ ) {
+  var y = document.createElement('td');
+  y.appendChild(document.createTextNode('Thead cell text'));
+  theTable.tHead.rows[x].appendChild(y);
+}
+for( var z = 0; z < theTable.tBodies.length; z++ ) {
+  for( var x = 0; x < theTable.tBodies[z].rows.length; x++ ) {
+    var y = document.createElement('td');
+    y.appendChild(document.createTextNode('Tbody cell text'));
+    theTable.tBodies[z].rows[x].appendChild(y);
+  }
+}
+for( var x = 0; x < theTable.tFoot.rows.length; x++ ) {
+  var y = document.createElement('td');
+  y.appendChild(document.createTextNode('Tfoot cell text'));
+  theTable.tFoot.rows[x].appendChild(y);
+}
+
+// create and style a divider
+
+var div = document.createElement("div");
+div.style.width = "100px";
+div.style.height = "100px";
+div.style.background = "red";
+div.style.color = "white";
+div.innerHTML = "Hello";
+
+document.body.appendChild(div);
+
+// create and style a divider
+var div = document.createElement('div');
+div.innerHTML = "my <b>new</b> skill - <large>DOM maniuplation!</large>";
+// set style
+div.style.color = 'red';
+div.style.fontFamily = 'Arial Black';
+div.style.fontSize = '12px';
+div.style.fontWeight = 'bold';
+div.style.fontSize = '16px';
+div.style.backgroundColor = 'red';
+
+// http://www.w3schools.com/jsref/dom_obj_style.asp
+
+// better to use CSS though - just set class
+div.setAttribute('class', 'myclass'); // and make sure myclass has some styles in css
+document.body.appendChild(div);
+
+// This creates a new <div> and inserts it before the element with id="org_div1":
+
+var newDiv = document.createElement("div");
+my_div = document.getElementById("org_div1");
+document.body.insertBefore(newDiv, my_div);  // // add the newly created element and it's content into the DOM
+
+=========================================================
+
+// How to Scroll a Page With JavaScript
+
+function pageScroll() {
+    	window.scrollBy(0,50); // horizontal and vertical scroll increments
+    	scrolldelay = setTimeout('pageScroll()',100); // scrolls every 100 milliseconds
+}
+
+// To begin scrolling automatically when the page loads, add the following code to the body tag:
+
+<body onLoad="pageScroll()">
+
+// To begin scrolling when prompted by the user, call the function from a link or button:
+
+// Text Link
+<a href="javascript:pageScroll()">Scroll Page</a>
+
+// Button
+<input type="button" onClick="pageScroll()" value="Scroll Page">
+
+// The pageScroll() function causes the page to keep scrolling forever. The following function will stop the scrolling, and can be called in the same way:
+
+function stopScroll() {
+    	clearTimeout(scrolldelay);
+}
+
+
+<a href="javascript:stopScroll()">Stop Scrolling</a>
+
+=========================================================
+
+// move to : 1st  cnumber is "x" (i.e. left) , 2nd number is "y" (i.e. top)
+
+<script>
+self.moveTo(100,200);
+</script>
+
+=========================================================
+
+// move to a specific point
+
+<script>
+window.location.hash = "insert_the_name_of_an_anchor_tag";
+</script>
+
+=========================================================
+
+// the options[] property of SELECT returns as a HTMLCollection every OPTION, for example
+
+document.getElementById("myselect").options[0] //accesses first option via options[]
+document.getElementById("myselect").options[3] //accesses 4th option via options[]
+
+// each individual OPTION within SELECT is represented in JavaScript as a corresponding option object.
+// This gives you access to an OPTION's actual value or text, among other things. For example:
+
+document.getElementById("myselect").options[0].value //accesses value attribute of 1st option
+document.getElementById("myselect").options[3].text //accesses text of 1st option
+
+=========================================================
+
+// Prompt the user for verification after they click the "submit" button
+
+<html>
+<head>
+<script type="text/javascript">
+function show_confirm(the_form)
+{
+var r=confirm("Press a button");
+if (r==true) {
+  alert("You pressed OK!");
+  the_form.submit();
+  }
+else {
+  alert("You pressed Cancel!");
+  return false;
+  }
+}
+</script>
+</head>
+<body>
+
+<input type="button" onclick="show_confirm()" value="Show confirm box" />
+
+</body>
+</html>
+
+=========================================================
+
+http://www.randomsnippets.com/2008/02/21/how-to-dynamically-add-form-elements-via-javascript/
+-- dynamically create new field
+
+<script src="/wp-includes/js/addInput.js" language="Javascript" type="text/javascript"></script>
+<form method="POST">
+     <div id="dynamicInput">
+          Entry 1<br><input type="text" name="myInputs[]">
+     </div>
+     <input type="button" value="Add another text input" onClick="addInput('dynamicInput');">
+</form>
+
+var counter = 1;
+var limit = 3;
+function addInput(divName){
+     if (counter == limit)  {
+          alert("You have reached the limit of adding " + counter + " inputs");
+     }
+     else {
+          var newdiv = document.createElement('div');
+          newdiv.innerHTML = "Entry " + (counter + 1) + " <br><input type='text' name='myInputs[]'>";
+          document.getElementById(divName).appendChild(newdiv);
+          counter++;
+     }
+}
+
+// Here is the plain JavaScript code for the addAllInputs function. It accepts 2 arguments:
+
+// div id - This is the div id where all the dynamic inputs will be added to. 
+// input type - This is the type of input that we want to add
+
+var counterText = 0;
+var counterRadioButton = 0;
+var counterCheckBox = 0;
+var counterTextArea = 0;
+function addAllInputs(divName, inputType){
+     var newdiv = document.createElement('div');
+     switch(inputType) {
+          case 'text':
+               newdiv.innerHTML = "Entry " + (counterText + 1) + " <br><input type='text' name='myInputs[]'>";
+               counterText++;
+               break;
+          case 'radio':
+               newdiv.innerHTML = "Entry " + (counterRadioButton + 1) + " <br><input type='radio' name='myRadioButtons[]'>";
+               counterRadioButton++;
+               break;
+          case 'checkbox':
+               newdiv.innerHTML = "Entry " + (counterCheckBox + 1) + " <br><input type='checkbox' name='myCheckBoxes[]'>";
+               counterCheckBox++;
+               break;
+          case 'textarea':
+	       newdiv.innerHTML = "Entry " + (counterTextArea + 1) + " <br><textarea name='myTextAreas[]'>type here...</textarea>";
+               counterTextArea++;
+               break;
+          }
+     document.getElementById(divName).appendChild(newdiv);
+} 
+
+=========================================================
+
+http://www.ozzu.com/programming-forum/adding-elements-form-javascript-t24119.html
+-- use JS to dynamically add a form input field
+
+<html>
+<head>
+<title>Adding elements to a form</title>
+<script language="javascript">
+var items=1;
+function AddItem() {
+ div=document.getElementById("items");
+ button=document.getElementById("add");
+ items++;
+ newitem="<b>Item " + items + ": </b>";
+ newitem+="<input type=\"text\" name=\"item" + items;
+ newitem+="\" size=\"45\"><br>";
+ newnode=document.createElement("span");
+ newnode.innerHTML=newitem;
+ div.insertBefore(newnode,button);
+}
+</script>
+</head>
+<body>
+<h1>Adding Form Elements</h1>
+<p>The form below allows you to add elements dynamically.</p>
+<hr>
+<form name="form1">
+<div ID="items">
+<b>Item 1:</b>
+<input type="text" name="item1" size="45">
+<br>
+<input type="button" value="Add an Item"
+onClick="AddItem();" ID="add">
+</div>
+</form>
+</body>
+</html>
+
+=========================================================
+
+function doStuff() {
+  //do some things
+  setTimeout(continueExecution, 10000) //wait ten seconds before continuing
+}
+
+function continueExecution() {
+  //finish doing things after the pause
+} 
+
+=========================================================
+
+function open2(url, opt){
+  if (opt == 0) // current window
+    window.location = url;
+  else if (opt == 1) // new window
+    window.open(url);
+  else if (opt == 2) // background window
+    {window.open(url); self.focus();}
+}
+
+
+function open_in_new_tab(url )
+{
+  var win=window.open(url, '_blank');
+  win.focus();
+}
+
+=========================================================
+
+// Change the text, URL, and target of a link
+
+<script type="text/javascript">
+function changeLink()
+{
+document.getElementById('myAnchor').innerHTML="W3Schools";
+document.getElementById('myAnchor').href="http://www.w3schools.com";
+document.getElementById('myAnchor').target="_blank";
+}
+</script>
+
+<a id="myAnchor" href="http://www.microsoft.com">Microsoft</a>
+<input type="button" onclick="changeLink()" value="Change link">
+
+=========================================================
+
+// execute DOS commands
+
+http://www.winscripter.com/WSH/System/105.aspx
+
+=========================================================
+
+// Live validation of a text field to only allow alphabetical (upper and lower case),
+// SPACE and the BACKSPACE keys.
+
+// The following example uses the Event Object and keyboard related properties to only
+// allow alphabetical keys plus BACKSPACE and SPACE in a form field.
+
+<form>
+<input type="text" id="alphanumeric" size="25"></textarea>
+</form>
+
+<script type="text/javascript">
+
+document.getElementById("alphanumeric").onkeypress=function(e){
+var e=window.event || e
+var keyunicode=e.charCode || e.keyCode
+//Allow alphabetical keys, plus BACKSPACE and SPACE
+return (keyunicode>=65 && keyunicode<=122 || keyunicode==8 || keyunicode==32)? true : false
+}
+
+</script>
+
+=========================================================
+
+http://www.somacon.com/p241.php
+-- Javascript Autocomplete Combobox - find as you type
+
+http://www.hscripts.com/scripts/JavaScript/autocomplete-form.php
+-- FREE JavaScript - Copy autocomplete source code - Dynamic auto complete Formfield - HIOX
+-- other interesting stuff listed on left-hand-side menu
+
+=========================================================
+
+function toggleSubmit()
+{
+     frm = document.forms[0]
+     if ( frm.submit.disabled == true ) {
+         frm.submit.disabled = false;
+     }
+     else{
+        frm.submit.disabled = true;
+     }
+}
+
+=========================================================
+
+// detect if an element is selected from a dropdown list
+
+<select name="ab" onchange="if (this.selectedIndex) doSomething();">
+    <option value="-1">--</option>
+    <option value="1">option 1</option>
+    <option value="2">option 2</option>
+    <option value="3">option 3</option>
+</select>
+
+=========================================================
+
+// Automatic copying to clipboard may be dangerous, therefore most browsers
+// (except IE) make it very difficult. Personally, I use the following simple trick:
+
+function copyToClipboard (text) {
+    window.prompt ("Copy to clipboard: Ctrl+C, Enter", text);
+}
+
+// The user is presented with the prompt box, where the text to be copied is already selected.
+// Now it's enough to press Ctrl+C and Enter (to close the box) -- and voila!
+
+// Now the clipboard copy operation is SAFE, because the user does it manually
+// (but in a pretty straightforward way). Of course, works in all browsers.
+
+// Only copies single line ???
+
+=========================================================
+
+// Copy to clipboard
+
+<script type="text/javascript">
+    function select_all(obj) {
+        var text_val = eval(obj);
+        text_val.focus();
+        text_val.select();
+        if (!document.all) return; // IE only
+        r = text_val.createTextRange();
+        r.execCommand(\\’copy\\’);
+    }
+</script>
+
+<input value="http://www.sajithmr.com"  onclick="select_all(this)" name="url" type="text" /> 
+
+=========================================================
+
+function copytext(text) {
+    var textField = document.createElement('textarea');
+    textField.innerText = text;
+    document.body.appendChild(textField);
+    textField.select();
+    document.execCommand('copy');
+    textField.remove();
+}
+
+=========================================================
+
+// Copy to clipboard
+
+// I also suggest jQuery Clipboard Copy Plugins:
+
+$("#elmID").copy();
+
+=========================================================
+
+// Copy a single line to the clipboard
+
+function copyToClipboard(s) {
+    if (window.clipboardData && clipboardData.setData) {
+        clipboardData.setData('text', s);
+    }
+}
+
+=========================================================
+
+// Copy text to clipboard
+
+<SPAN ID="copytext" STYLE="height:150;width:162;background-color:pink">
+This text will be copied onto the clipboard when you click the button below. Try it!
+</SPAN> 
+<TEXTAREA ID="holdtext" STYLE="display:none;">
+</TEXTAREA>
+<BUTTON onClick="ClipBoard();">Copy to Clipboard</BUTTON> 
+
+
+<SCRIPT LANGUAGE="JavaScript">
+
+function ClipBoard() 
+{
+holdtext.innerText = copytext.innerText;
+Copied = holdtext.createTextRange();
+Copied.execCommand("Copy");
+}
+
+</SCRIPT>
+
+=========================================================
+
+<script>
+function CopyToClipboard () {
+    var input = document.getElementById("CfgText");
+        window.clipboardData.setData("Text", input.value);
+}
+
+function ShowClipboardContent () {
+    alert (window.clipboardData.getData ("Text"));
+}
+
+function ClearClipboard () {
+    window.clipboardData.clearData ("Text");
+}
+
+</script>
+
+<textarea id="CfgText" rows="$lineSize" cols="60" >$cfg</textarea>
+
+<button onclick="CopyToClipboard('CfgText')"> Copy template text to Clipboard</button>
+
+
+=========================================================
+
+http://www.c-point.com/JavaScript/articles/file_access_with_JavaScript.htm
+-- use JS to write data to a file
+
+=========================================================
+
+// automatically set the focus to a specific element on the page
+
+<body OnLoad="document.myform.mytextfield.focus();">
+
+=========================================================
+
+<script>
+setTimeout(function() {
+document.forms[0].submit();
+}, 5000);
+</script>
+
+
+<script type="text/javascript">  
+
+ window.onload = function() {  
+   document.myForm.submit();  
+ };  
+ </script> 
+
+
+=========================================================
+
+function IsNumeric(buffer) {
+	if ( buffer.search(/^[0-9][0-9]*$/) < 0 ) {
+		alert("Non numeric data found in buffer\n");
+	}
+}
+
+function IsNumeric(input) {
+	return (input - 0) == input && input.length > 0;
+}
+
+function IsNumeric(num) {
+	return (num >=0 || num < 0);
+}
+
+function IsNumeric(input){
+	var RE = /^-{0,1}\d*\.{0,1}\d+$/;
+	return (RE.test(input));
+}
+
+var reInteger = /^\d+$/;
+function isInteger (s) {
+	return reInteger.test(s)
+}
+
+if(isInteger("1a11"))
+	document.write("Int");
+else
+	document.write("Not an integer");
+
+=========================================================
+
+// case insensitive compare
+
+if(username.toLowerCase() == "SomeAgent".toLowerCase())
+	document.write("Welcome special agent"); 
+else
+	document.write("Access Denied!"); 
+
+var areEqual = string1.toUpperCase() === string2.toUpperCase();
+
+=========================================================
+
+switch(n)
+{
+case 1:
+  execute code block 1
+  break;
+case 2:
+  execute code block 2
+  break;
+default:
+  code to be executed if n is different from case 1 and 2
+}
+
+var day=new Date().getDay();
+switch (day)
+{
+case 6:
+  x = "Today it's Saturday";
+  break;
+case 0:
+  x = "Today it's Sunday";
+  break;
+default:
+  x = "Looking forward to the Weekend";
+}
+
+=========================================================
+
+custom javascript alert replacements
+
+http://www.gayadesign.com/diy/customize-the-default-alert-function-of-javascript/
+
+http://jdstiles.com/java/jsalert.html
+
+http://javascript.about.com/library/blmodald1.htm
+
+http://ssssnakes.com/smoke/
+
+
+http://stackoverflow.com/questions/18492157/creating-a-suitable-replacement-for-prompt
+
+http://bootboxjs.com/
+
+http://t4t5.github.io/sweetalert/
+
+http://www.cssscript.com/small-javascript-alert-confirm-dialog-replacement-custom-alert/
+
+=========================================================
+
+http://www.mredkj.com/javascript/numberFormat.html
+http://josscrowcroft.github.com/accounting.js/
+
+function numberWithCommas(x) {
+    x = x.toString();
+    var pattern = /(-?\d+)(\d{3})/;
+    while (pattern.test(x))
+        x = x.replace(pattern, "$1,$2");
+    return x;
+}
+
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+function numberWithCommas(x) {
+    var parts = x.toString().split(".");
+    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return parts.join(".");
+}
+
+function numberWithCommas(n) {
+    var parts=n.toString().split(".");
+    return parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",") + (parts[1] ? "." + parts[1] : "");
+}
+
+function commaFormat(inputString) {
+   inputString = inputString.toString();
+   var decimalPart = "";
+   if(inputString.indexOf('.') != -1) {
+    //alert("decimal number");
+    inputString = inputString.split(".");
+    decimalPart = "." + inputString[1];
+    inputString = inputString[0];
+    //alert(inputString);
+    //alert(decimalPart);
+
+    }
+    var outputString = "";
+var count = 0;
+for(var i = inputString.length - 1; i >= 0 && inputString.charAt(i) != '-'; i--) {
+    //alert("inside for" + inputString.charAt(i) + "and count=" + count + " and outputString=" + outputString);
+    if(count == 3) {
+        outputString += ",";
+        count = 0;
+    }
+    outputString += inputString.charAt(i);
+    count++;
+}
+if(inputString.charAt(0) == '-') {
+    outputString += "-";
+}
+//alert(outputString);
+//alert(outputString.split("").reverse().join(""));
+return outputString.split("").reverse().join("") + decimalPart;
+
+    }
+
+Number.prototype.formatMoney = function(decPlaces, thouSeparator, decSeparator) {
+    var n = this,
+    decPlaces = isNaN(decPlaces = Math.abs(decPlaces)) ? 2 : decPlaces,
+    decSeparator = decSeparator == undefined ? "." : decSeparator,
+    thouSeparator = thouSeparator == undefined ? "," : thouSeparator,
+    sign = n < 0 ? "-" : "",
+    i = parseInt(n = Math.abs(+n || 0).toFixed(decPlaces)) + "",
+    j = (j = i.length) > 3 ? j % 3 : 0;
+    return sign + (j ? i.substr(0, j) + thouSeparator : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + thouSeparator) + (decPlaces ? decSeparator + Math.abs(n - i).toFixed(decPlaces).slice(2) : "");
+};
+
+// There is a built-in function toFixed in javascript 
+var num = new Number(349);
+document.write("$" + num.toFixed(2));
+
+Number.toFixed(x)
+// Formats any number for "x" number of trailing decimals.
+// The number is rounded up, and "0"s are used after the decimal point if needed to
+// create the desired decimal length.
+
+Number.toPrecision(x)
+// Formats any number so it is of "x" length. Also called significant digits.
+// A decimal point and "0"s are used if needed to create the desired length.
+
+buffer = ("000" + number).slice(-4); // generate a 4-digit number with leading zeroes
+
+=========================================================
+
+// clear field on focus
+
+<input type="text" onfocus="if(this.value == 'something') { this.value = ''; }" value="something" />
+
+=========================================================
+
+// Writing to the local filesystem using javascript
+
+http://4umi.com/web/javascript/filewrite.php
+
+=========================================================
+
+http://www.javascripter.net/faq/writinga.htm
+-- blocked by UPS !!
+
+=========================================================
+
+<SCRIPT language="JavaScript">   
+  
+function WriteFile()    
+{   
+   var fso  = new ActiveXObject("Scripting.FileSystemObject");    
+   var fh = fso.CreateTextFile("c:\\Test.txt", true);    
+   fh.WriteLine("Some text goes here...");    
+   fh.WriteLine("new ...");    
+   fh.Close();    
+}   
+  
+</SCRIPT>   
+
+=========================================================
+
+// Filepicker.io | A simpler, more powerful Javascript API
+
+https://www.filepicker.io/products/javascript_v1/
+https://developers.filepicker.io/docs/web/v1/
+
+=========================================================
+
+http://www.w3avenue.com/2010/01/04/list-of-free-web-based-html-editors-for-your-cms-project/
+
+=========================================================
+
+BlueShoes browser-based Wysiwyg Editor (dhtml, javascript)
+http://www.blueshoes.org/en/javascript/editor/
+-- blocked by UPS
+
+=========================================================
+
+http://livepipe.net/control/textarea
+-- Control.TextArea  --  Cross browser textarea manipulation for Prototype.
+
+=========================================================
+
+// modify a table cell contents
+
+document.getElementById('sometable').rows[1].cells[0];  // 1st column in 2nd row
+document.getElementById("contentcell").innerHTML = some_new_data;
+
+// delete all rows from an HTML table
+
+var Parent = document.getElementById(tableID);
+while(Parent.hasChildNodes())
+{
+   Parent.removeChild(Parent.firstChild);
+}
+
+
+// If you still need it, this will delete all rows from your table, except for your head row.
+
+var table = document.getElementById("tableid");
+//or use :  var table = document.all.tableid;
+for(var i = table.rows.length - 1; i > 0; i--)
+{
+    table.deleteRow(i);
+}
+
+// Change the red "0" to "-1" if you wish to delete all rows, including the head row if you have one.
+
+
+document.getElementById("tableId").innerHTML = "";  // delete all rows
+
+=========================================================
+
+string.substring(from, to)
+
+Parameter Description 
+
+from Required. The index where to start the extraction. First character is at index 0 
+to   Optional. The index where to stop the extraction. If omitted, it extracts the rest of the string 
+
+=========================================================
+
+// How do you get the caret position in text area using JavaScript?
+
+function setSelectionRange(input, selectionStart, selectionEnd) {
+    if (input.setSelectionRange) {
+        input.focus(); input.setSelectionRange(selectionStart, selectionEnd);
+    } else if (input.createTextRange) {
+        var range = input.createTextRange();
+        range.collapse(true);range.moveEnd('character', selectionEnd);
+        range.moveStart('character', selectionStart);range.select();
+    }
+}
+
+function setCaretToPos (input, pos) {
+    setSelectionRange(input, pos, pos);
+}
+
+To execute the code, it would be done as follows:
+
+
+setCaretToPos(document.getElementById("testinput"), 8);
+
+So, assuming you have a textarea with the id of testinput created on your page,
+the cursor position will be set after the 8th character in the textarea.
+
+=========================================================
+
+// remove a DOM element
+
+function removeElement(el) {
+el.parentNode.removeChild(el);
+}
+
+var child = document.getElementById(childDiv);
+//var parent = document.getElementById(parentDiv);
+child.parentNode.removeChild(child);
+
+=========================================================
+
+document.getElementById(editor_divider_id).appendChild(new_div2);
+
+// create a node and append to <BODY>
+
+var _body = document.getElementsByTagName('body') [0];
+var _div = document.createElement('div');
+var _text = document.createTextNode('Creating Div Element');
+_div.appendChild(_text);
+_body.appendChild(_div);
+
+=========================================================
+
+// The insertBefore() method inserts a new child node before an existing child node
+// Syntax : elementNode.insertBefore(new_node,existing_node)
+//          new_node - Required. The node to insert.
+//          existing_node - Required. The existing node. The new node is inserted before this node.
+
+container.insertBefore(newFreeformLabel, container.firstChild);
+
+document.getElementById("myList").insertBefore(newItem,existingItem);
+
+=========================================================
+
+// This function inserts newNode after referenceNode
+
+function insertAfter(referenceNode, newNode ){
+    referenceNode.parentNode.insertBefore( newNode, referenceNode.nextSibling );
+}
+
+//create function, it expects 2 values.
+function insertAfter(newElement,targetElement) {
+	//target is what you want it to go after. Look for this elements parent.
+	var parent = targetElement.parentNode;
+	
+	//if the parents lastchild is the targetElement...
+	if(parent.lastchild == targetElement) {
+		//add the newElement after the target element.
+		parent.appendChild(newElement);
+	} else {
+		// else the target has siblings, insert the new element between the target and it's next sibling.
+		parent.insertBefore(newElement, targetElement.nextSibling);
+	}
+}
+
+=========================================================
+
+// access the cells in table rows
+
+var table = document.getElementById("mytab1");
+for (var i = 0, row; row = table.rows[i]; i++) {
+   //iterate through rows
+   //rows would be accessed using the "row" variable assigned in the for loop
+   for (var j = 0, col; col = row.cells[j]; j++) {
+     //iterate through columns
+     //columns would be accessed using the "col" variable assigned in the for loop
+   }  
+}
+
+=========================================================
+
+// Is there a way you can obtain the row id when some one clicks on a cell? 
+
+this.parentNode.id 
+
+=========================================================
+
+// delete table row
+
+table.deleteRow(index);
+
+function delete_row_by_id(rowid)  
+{   
+    var row = document.getElementById(rowid);
+    row.parentNode.removeChild(row);
+}
+
+function delete_row_by_id(rowid)  
+{   
+    var row = document.getElementById(rowid);
+    var table = row.parentNode;
+    while ( table && table.tagName != 'TABLE' )
+        table = table.parentNode;
+    if ( !table )
+        return;
+    table.deleteRow(row.rowIndex);
+}
+
+function removeRow(id) {
+  var tr = document.getElementById(id);
+  if (tr) {
+    if (tr.nodeName == 'TR') {
+      var tbl = tr; // Look up the hierarchy for TABLE
+      while (tbl != document && tbl.nodeName != 'TABLE') {
+        tbl = tbl.parentNode;
+      }
+
+      if (tbl && tbl.nodeName == 'TABLE') {
+        while (tr.hasChildNodes()) {
+          tr.removeChild( tr.lastChild );
+        }
+      tr.parentNode.removeChild( tr );
+      }
+    } else {
+      alert( 'Specified document element is not a TR. id=' + id );
+    }
+  } else {
+    alert( 'Specified document element is not found. id=' + id );
+  }
+}
+
+=========================================================
+
+// put focus on a specific table row
+
+scrollIntoView method [ element.scrollIntoView(alignWithTop) ] :
+http://developer.mozilla.org/en/docs...scrollIntoView
+
+function focus_table_row(row_id)
+{
+var row = document.getElementById(row_id);
+row.scrollIntoView(true);
+}
+
+=========================================================
+
+Goto any website and paste
+
+javascript:document.body.contentEditable='true'; document.designMode='on'; void 0
+
+in the address bar.
+
+Now you can edit anything in that page. Really cool trick.
+
+=========================================================
+
+// displaying the value of an object
+
+function mydump(arr,level)
+{
+    var dumped_text = "";
+    if(!level) level = 0;
+
+    var level_padding = "";
+    for(var j=0;j<level+1;j++) level_padding += "    ";
+
+    if(typeof(arr) == 'object') {  
+        for(var item in arr) {
+            var value = arr[item];
+
+            if(typeof(value) == 'object') { 
+                dumped_text += level_padding + "'" + item + "' ...\n";
+                dumped_text += mydump(value,level+1);
+            } else {
+                dumped_text += level_padding + "'" + item + "' => \"" + value + "\"\n";
+            }
+        }
+    } else { 
+        dumped_text = "===>"+arr+"<===("+typeof(arr)+")";
+    }
+    return dumped_text;
+}
+
+var output = '';
+for (property in object) {
+  output += property + ': ' + object[property]+'; ';
+}
+alert(output);
+
+alert("myObject is " + myObject.toSource());
+
+-------------
+
+function ObjToSource(o){
+    if (!o) return 'null';
+    if (typeof(o) == "object") {
+        if (!ObjToSource.check) ObjToSource.check = new Array();
+        for (var i=0, k=ObjToSource.check.length ; i<k ; ++i) {
+            if (ObjToSource.check[i] == o) {return '{}';}
+        }
+        ObjToSource.check.push(o);
+    }
+    var k="",na=typeof(o.length)=="undefined"?1:0,str="";
+    for(var p in o){
+        if (na) k = "'"+p+ "':";
+        if (typeof o[p] == "string") str += k + "'" + o[p]+"',";
+        else if (typeof o[p] == "object") str += k + ObjToSource(o[p])+",";
+        else str += k + o[p] + ",";
+    }
+    if (typeof(o) == "object") ObjToSource.check.pop();
+    if (na) return "{"+str.slice(0,-1)+"}";
+    else return "["+str.slice(0,-1)+"]";
+}
+
+<script language="javascript">
+
+
+       var MAX_DUMP_DEPTH = 10;
+
+       function dumpObj(obj, name, indent, depth) {
+              if (depth > MAX_DUMP_DEPTH) {
+                     return indent + name + ": <Maximum Depth Reached>\n";
+              }
+
+              if (typeof obj == "object") {
+                     var child = null;
+                     var output = indent + name + "\n";
+                     indent += "\t";
+                     for (var item in obj)
+                     {
+                           try {
+                                  child = obj[item];
+                           } catch (e) {
+                                  child = "<Unable to Evaluate>";
+                           }
+                           if (typeof child == "object") {
+                                  output += dumpObj(child, item, indent, depth + 1);
+                           } else {
+                                  output += indent + item + ": " + child + "\n";
+                           }
+                     }
+                     return output;
+              } else {
+                     return obj;
+              }
+       }
+</script>
+
+-----------------
+
+// usage: dump (object object[, int maxLevel])  
+// params  
+//  object: any object to get info on  
+//  maxLevel: number of levels to expand (default 0)  
+
+function dump(obj, maxLevel, indent) {  
+    if (indent == null) indent = "";  
+    if (maxLevel == null) maxLevel = 0;  
+    if (indent.length > maxLevel) return "###";  
+
+    var strMessage = "\r\n";  
+
+    for (var p in obj) {  
+        strMessage += indent + p + ": ";  
+        try {  
+            if (obj[p] && typeof(obj[p]) == "object") {  
+                strMessage += dump(obj[p], indent + "\t");  
+            } else {  
+                strMessage += obj[p];  
+            }  
+        } catch (e) {  
+            strMessage += e.message;  
+        }  
+        strMessage += "\r\n";  
+    }  
+    return strMessage;  
+}  
+
+// to alert dump  
+
+alert(dump(window));  
+
+// with an extra level of info  
+
+alert(dump(window,1));  
+
+
+=========================================================
+
+// Bit Hack #1. Check if the integer is even or odd
+
+if ((x & 1) == 0) {
+  x is even
+}
+else {
+  x is odd
+}
+
+// Bit Hack #2. Test if the n-th bit is set
+
+if (x & (1<<n)) {
+  n-th bit is set
+}
+else {
+  n-th bit is not set
+}
+
+// Bit Hack #3. Set the n-th bit.
+
+y = x | (1<<n)
+
+// Bit Hack #4. Unset the n-th bit.
+
+y = x & ~(1<<n)
+
+// Bit Hack #5. Toggle the n-th bit.
+
+y = x ^ (1<<n)
+
+// Bit Hack #6. Turn off the rightmost 1-bit.
+
+y = x & (x-1)
+
+=========================================================
+
+// Prompt Dialog Box:
+
+The prompt dialog box is very useful when you want to pop-up a text box to get user input.
+Thus it enable you to interact with the user. The user needs to fill in the field and then click OK.
+
+This dialog box is displayed using a method called prompt() which takes two parameters
+(i) A label which you want to display in the text box
+(ii) A default string to display in the text box.
+
+This dialog box with two buttons: OK and Cancel.
+If the user clicks on OK button the window method prompt() will return entered value from the text box.
+If the user clicks on the Cancel button the window method prompt() returns null.
+
+var retVal = prompt("Enter your name : ", "your name here");
+alert("You have entered : " +  retVal );
+
+=========================================================
+
+// modify form field value
+
+the_form['Project_ID'].value = new_proj_value
+
+=========================================================
+
+// Change the color of the four borders of a <div> element
+
+document.getElementById("myDiv").style.borderColor="red";
+document.getElementById("myDiv").style.borderColor="green purple";
+
+=========================================================
+
+// Add a border to a <div> element:
+
+document.getElementById("myDiv").style.border="thick solid #0000FF";
+document.getElementById("myDiv").style.border="thin dotted red";
+document.getElementById("myDiv").style.border="1px soild red";
+document.getElementById("myDiv").style.borderWidth="thick";
+document.getElementById("myDiv").style.borderWidth="2px";
+
+// get style border details
+
+style_info = object.style.border;
+
+// set the border property
+
+object.style.border="width style color|initial|inherit"
+object.style.borderWidth="thin|medium|thick|length|initial|inherit"
+
+// change border to red
+
+document.getElementById("fName").style.borderColor="#FF0000"
+
+// css red border class
+.redborder { border: 2px solid red; }
+
+document.getElementById("fName").className = 'redborder';
+
+=========================================================
+
+// dynamically set onfocus event handler
+
+function set_focus_background(obj)
+{
+    obj.style.backgroundColor = "#FFFFCC";
+}
+
+other_obj.onfocus = function () { set_focus_background(other_obj); };
+
+=========================================================
+
+// Animate the background color of a document
+
+<SCRIPT LANGUAGE= "javascript">
+
+setTimeout("document.bgColor='white'", 1000)
+setTimeout("document.bgColor='lightpink'", 1500)
+setTimeout("document.bgColor = 'pink'", 2000)
+setTimeout("document.bgColor =  'deeppink'", 2500)
+setTimeout("document.bgColor = 'red'", 3000)
+setTimeout("document.bgColor = 'tomato'", 3500)
+setTimeout("document.bgColor = 'darkred'", 4000)
+</SCRIPT>
+
+=========================================================
+
+http://www.dropzonejs.com/
+-- DropzoneJS is an open source library that provides drag'n'drop file uploads with image previews.
+
+=========================================================
+
+// Check if string is non-blank
+var isNonblank_re    = /\S/;
+function isNonblank (s) {
+   return String (s).search (isNonblank_re) != -1
+}
+
+=========================================================
+
+// Check if string is currency
+var isCurrency_re    = /^\s*(\+|-)?((\d+(\.\d\d)?)|(\.\d\d))\s*$/;
+function isCurrency (s) {
+   return String(s).search (isCurrency_re) != -1
+}
+
+=========================================================
+
+// checks that an input string looks like a valid email address.
+var isEmail_re       = /^\s*[\w\-\+_]+(\.[\w\-\+_]+)*\@[\w\-\+_]+\.[\w\-\+_]+(\.[\w\-\+_]+)*\s*$/;
+function isEmail (s) {
+   return String(s).search (isEmail_re) != -1;
+}
+
+=========================================================
+
+// Check for valid credit card type/number
+var creditCardList = [
+   //type      prefix   length
+   ["amex",    "34",    15],
+   ["amex",    "37",    15],
+   ["disc",    "6011",  16],
+   ["mc",      "51",    16],
+   ["mc",      "52",    16],
+   ["mc",      "53",    16],
+   ["mc",      "54",    16],
+   ["mc",      "55",    16],
+   ["visa",    "4",     13],
+   ["visa",    "4",     16]
+];
+function isValidCC (cctype, ccnumber) {
+   var cc = getdigits (ccnumber);
+   if (luhn (cc)) {
+      for (var i in creditCardList) {
+         if (creditCardList [i][0] == (cctype.toLowerCase ())) {
+            if (cc.indexOf (creditCardList [i][1]) == 0) {
+               if (creditCardList [i][2] == cc.length) {
+                  return true;
+               }
+            }
+         }
+      }
+   }
+   return false;
+}
+
+=========================================================
+
+http://www.webappers.com/2010/03/31/jsdatepick-a-simple-free-javascript-date-picker/
+-- jsdatePick - a simple free javascript date picker
+
+=========================================================
+
+http://www.styledisplay.com/mootoolsdatepicker/
+-- fancy mootools date picker
+
+=========================================================
+
+http://www.dhtmlx.com/docs/products/dhtmlxCalendar/
+
+=========================================================
+
+http://www.richarea.com/demo/rich_calendar/
+
+=========================================================
+
+http://www.javascriptkit.com/script/script2/timestamp.shtml
+-- cut and paste date picker
+
+=========================================================
+
+http://yuilibrary.com/
+-- YUI is a free, open source JavaScript and CSS library for building richly interactive web applications
+
+=========================================================
+
+http://www.javascriptkit.com/script/cutindex1a.shtml
+-- interesting calendar scripts
+
+=========================================================
+
+http://designmodo.com/javascript-calendars/
+-- 13 Free and Premium JavaScript/jQuery Calendars
+
+=========================================================
+
+// There are four ways of instantiating a date:
+
+
+var d = new Date();
+var d = new Date(milliseconds);
+var d = new Date(dateString);
+var d = new Date(year, month, day, hours, minutes, seconds, milliseconds);
+
+=========================================================
+
+// to generate a date looking like 12:19:27 P.M. 05/28/2014
+
+var time = new Date();
+var monthday = time.getDate();  // 0 - 31
+var weekday = time.getDay(); // 0 - 6 (Sunday is 0)
+var month = time.getMonth(); // 0 - 11
+var year = time.getFullYear();
+var hour = time.getHours(); // 0 - 23
+var minute = time.getMinutes(); // 0 - 59
+var second = time.getSeconds();
+var temp = "" + ((hour > 12) ? hour - 12 : hour);
+month += 1;
+if ( month < 10 ) {
+    month = "0" + month;
+}
+if ( monthday < 10 ) {
+    monthday = "0" + monthday;
+}
+temp += ((minute < 10) ? ":0" : ":") + minute;
+temp += ((second < 10) ? ":0" : ":") + second;
+temp += (hour >= 12) ? " P.M." : " A.M.";
+temp += " " + month + "/" + monthday + "/" + year;
+liveclock.innerHTML = "<span style='font-family: Arial; font-size:20; color:blue;'>" + temp + "</span>";
+id = setTimeout("JSClock()",1000);
+
+// to generate a date looking like Tuesday 5/31/2016, 10:25:03 AM
+
+function JSClock()
+{
+        var time = new Date();
+	var dow = time.getDay();  // 0 - 6
+	var dowlist = [ "Sunday" , "Monday" , "Tuesday" , "Wednesday" , "Thurday" , "Saturday" ];
+	var temp = dowlist[dow] + " " + time.toLocaleString();
+
+        liveclock.innerHTML = "<span style='font-family: Arial; font-size:20; color:blue;'>" + temp + "</span>";
+        id = setTimeout("JSClock()",2000);
+}
+
+=========================================================
+
+try { ce = document.getElementById("coreedge").value } catch (E) { ce = "NotFound" };
+
+=========================================================
+
+// use AJAX type call to ead in the contents of a server sidde file
+
+if (window.XMLHttpRequest)
+{// code for IE7+, Firefox, Chrome, Opera, Safari
+    xmlhttp=new XMLHttpRequest();
+}
+else
+{// code for IE6, IE5
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+}
+xmlhttp.open("GET","YOUR_FILE.txt",false);
+xmlhttp.send();
+xmlDoc=xmlhttp.responseText;
+
+=========================================================
+
+// random number from 1 to N
+var random = Math.floor(Math.random() * N + 1);
+
+=========================================================
+
+// capture browser close event
+
+<script language="javascript">
+function fnUnloadHandler() {
+       // Add your code here
+       alert("Unload event.. Do something to invalidate users session..");
+}
+</script>
+<body onbeforeunload="fnUnloadHandler()">
+    <!-- Your page content -->
+</body>
+
+=========================================================
+
+// warn user if back button is pressed
+
+window.onbeforeunload = function() { 
+    return "You work will be lost."; 
+};
+
+=========================================================
+
+// Disable Back button using JavaScript
+
+<SCRIPT type="text/javascript">
+    window.history.forward();
+    function noBack() { window.history.forward(); }
+</SCRIPT>
+</HEAD>
+<BODY onload="noBack();"
+    onpageshow="if (event.persisted) noBack();" onunload="">
+
+=========================================================
+
+// Test if a variable is undefined:
+
+var x;
+
+if (x === undefined) {
+    txt = "x is undefined";
+} else {
+    txt = "x is defined";
+}
+
+=========================================================
+
+// execute a dos script from javascript
+
+<input type="button" value="Launch Installer" onclick="window.open('file:///S:Test/Test.bat')" />
+
+=========================================================
+
+<button onclick="window.open('file:///C:/Windows/notepad.exe')">
+    Launch notepad
+</button>
+
+=========================================================
+
+Adding Custom Attributes to HTML Elements
+A custom attribute is any user-defined attribute,
+just like other primitive HTML element attributes.
+You can add custom attributes to any HTML element.
+For example, suppose you wanted to add the
+displayName attribute to the following HTML text box: 
+
+    <input type="text" id="txtBox" />
+There are two ways to do this: 
+You can add displayName when you write the HTML element tag in the web page: 
+
+     <input type="text" id="txtBox" displayName="displayNAME1" />
+You can use the DOM: 
+
+     document.all.txtBox.displayName = "displayNAME1";
+As you can see, you access custom attributes the same way you'd access any built-in attributes. For example: 
+
+document.getElementById("txtBox").getAttribute("displayName");
+
+=========================================================
+
+//random number from 1 to N
+var random = Math.floor(Math.random() * N + 1);
+
+=========================================================
+
+// capture browser close button event or exiting the page
+
+<script language="javascript">
+function fnUnloadHandler() {
+       // Add your code here
+       alert("Unload event.. Do something to invalidate users session..");
+}
+</script>
+<body onbeforeunload="fnUnloadHandler()">
+    <!-- Your page content -->
+</body>
+
+=========================================================
+
+// warn user if back is pressed
+
+This is same as above.
+Difference is instead of capturing close event here we capture back button event.
+So that we know if user is moving away from this webpage.
+
+window.onbeforeunload = function() { 
+    return "You work will be lost."; 
+};
+
+=========================================================
+
+// scroll message at bottom of browser
+
+<script>
+<!--
+    var scrmsg = "               YoLinux.com: Web Tips and Tricks "; 
+    var scrspacer = " "; 
+    var scrpos = 0; 
+    function ScrollMessage() 
+    { 
+        window.status = scrmsg.substring(scrpos, scrmsg.length) + scrspacer + 
+            scrmsg.substring(0,scrpos); 
+        scrpos++; 
+        if (scrpos > scrmsg.length) scrpos = 0; 
+        window.setTimeout("ScrollMessage()", 150); 
+    } 
+
+    ScrollMessage(); 
+    //-->
+</script>
+
+// scroll message at top of browser window
+
+<script>
+<!--
+    var msg = "               YoLinux.com: Web Tips and Tricks. -- Top of Page -- "; 
+    var speed=200;
+
+    function ScrollTitle() {
+        document.title=msg;
+        msg=msg.substring(1,msg.length)+msg.charAt(0);
+        setTimeout("ScrollTitle()",speed);
+    }
+    ScrollTitle();
+    //-->
+</script>
+
+=========================================================
+
+http://www.taffydb.com/
+// An opensouce library that brings database features into your JavaScript applications
+
+=========================================================
+
+http://blog.mongodb.org/post/55693224724/nedb-a-lightweight-javascript-database-using
+
+// NeDB is a lightweight database written entirely in Javascript,
+// and that implements the well-known and loved MongoDB API.
+// It is packaged as a Node module that be used with a simple require and
+// can be used as an in-memory only or persistent datastore.
+// You can think of it as SQLite for MongoDB projects.
+
+=========================================================
+
+console.error(message); //gives you the red errormessage
+console.log(message); //gives the default message
+console.warn(message); //gives the warn message with the exclamation mark in front of it
+console.info(message); //gives an info message with an 'i' in front of the message
+
+=========================================================
+
+// This Javascript function presents a complete "Save As" Dialog box
+// to the user who runs this through the browser.
+// The user presses OK and the file is saved.
+
+// Edit: The following code only works with IE Browser since
+// Firefox and Chrome have considered this code a security problem and has blocked it from working.
+
+// content is the data you'll write to file<br/>
+// filename is the filename<br/>
+// what I did is use iFrame as a buffer, fill it up with text
+function save_content_to_file(content, filename)
+{
+    var dlg = false;
+    with(document){
+     ir=createElement('iframe');
+     ir.id='ifr';
+     ir.location='about.blank';
+     ir.style.display='none';
+     body.appendChild(ir);
+      with(getElementById('ifr').contentWindow.document){
+           open("text/plain", "replace");
+           charset = "utf-8";
+           write(content);
+           close();
+           document.charset = "utf-8";
+           dlg = execCommand('SaveAs', false, filename+'.txt');
+       }
+       body.removeChild(ir);
+     }
+    return dlg;
+}
+Invoke the function:
+
+save_content_to_file("Hello", "C:\\test");
+
+=========================================================
+
+// To create file try
+
+function makefile(){
+  var fso;
+  var thefile;
+
+    fso = new ActiveXObject("Scripting.FileSystemObject");
+    thefile=fso.CreateTextFile("C:\\tmp\\MyFile.txt",true);
+
+    thefile.close()
+    }
+
+// Create your directory in the C drive because windows has security against writing from web
+// e.g create folder named "tmp" in C drive.
+
+=========================================================
+
+http://wijmo.com/products/wijmo-5/?gclid=CL-g6bLxxcMCFcsjgQodDB0Ajw
+-- Welcome to Wijmo 5, our brand-new generation of JavaScript controls!
+-- With the launch of Wijmo 5 we've introduced a new HTML5/JavaScript product that
+-- takes full advantage of all the latest and greatest web technologies without
+-- making compromises to support legacy browsers.
+
+-- Paid/shareware ??
+
+=========================================================
+
+You can access IE8 script console by launching the "Developer Tools" (F12). Click the "Script" tab, then click "Console" on the right.
+
+From within your JavaScript code, you can do any of the following:
+
+<script type="text/javascript">
+    console.log('some msg');
+    console.info('information');
+    console.warn('some warning');
+    console.error('some error');
+    console.assert(false, 'YOU FAIL');
+</script>Also, you can clear the Console by calling console.clear().
+
+NOTE: It appears you must launch the Developer Tools first then refresh your page for this to work.
+
+=========================================================
+
+https://javascriptweblog.wordpress.com/2010/06/01/a-tracer-utility-in-2kb/
+-- trace utility in 2kb
+
+=========================================================
+
+// dynamically manipulate a <SELECT> list
+
+var myselect = document.getElementById('mylist');
+
+myselect.options[myselect.options.length] = new Option('Text1','Value1');  // add new element at the end of the list
+myselect.options.length = 0;  // remove all elements from the list
+
+var option = document.createElement("option");
+option.text = "Text";
+option.value = "myvalue";
+var select = document.getElementById("myselect");
+select.appendChild(option);
+
+var data = "";
+data = "<option value = Some value> Some Option </option>";         
+options = [];
+options.push(data);
+select = document.getElementById("drop_down_id");
+select.innerHTML = optionsHTML.join('\n');
+
+// Add a "Kiwi" option at the end of a drop-down list:
+
+var x = document.getElementById("mySelect");
+var option = document.createElement("option");
+option.text = "Kiwi";
+x.add(option);
+
+selectObject.add(option,index);
+// option - Required. Specifies the option to add. Must be an option or optgroup element
+// index - Optional. An integer that specifies the index position for where
+//         the new option element should be inserted. Index starts at 0.
+//         If no index is specified, the new option will be inserted at the end of the list
+
+// Add an option before a selected option in a drop-down list:
+
+var x = document.getElementById("mySelect");
+if (x.selectedIndex >= 0) {
+    var option = document.createElement("option");
+    option.text = "Kiwi";
+    var sel = x.options[x.selectedIndex]; 
+    x.add(option, sel);
+}
+
+myselect.removeChild( sel.options[1] ); // remove 2nd option in select box
+
+document.getElementById("DropList").options.length=0; // doesn't work in all browsers
+
+function removeOptions(selectbox)
+{
+    var i;
+    for(i=selectbox.options.length-1;i>=0;i--)
+    {
+        selectbox.remove(i);
+    }
+}
+//using the function:
+removeOptions(document.getElementById("mySelectObject"));
+
+=============
+
+  function tableCreate() {
+        //body reference 
+        var body = document.getElementsByTagName("body")[0];
+
+        // create elements <table> and a <tbody>
+        var tbl     = document.createElement("table");
+        var tblBody = document.createElement("tbody");
+
+        // cells creation
+        for (var j = 0; j <= 2; j++) {
+            // table row creation
+            var row = document.createElement("tr");
+
+            for (var i = 0; i < 2; i++) {
+                // create element <td> and text node 
+                //Make text node the contents of <td> element
+                // put <td> at end of the table row
+             var cell = document.createElement("td");    
+                  var cellText = document.createTextNode("cell is row "+j+", column "+i); 
+
+                cell.appendChild(cellText);
+                row.appendChild(cell);
+            }
+
+            //row added to end of table body
+            tblBody.appendChild(row);
+        }
+
+        // append the <tbody> inside the <table>
+        tbl.appendChild(tblBody);
+        // put <table> in the <body>
+        body.appendChild(tbl);
+        // tbl border attribute to 
+        tbl.setAttribute("border", "2");
+    }
+
+function addTable() {
+    var c, r, t;
+    t = document.createElement('table');
+    r = t.insertRow(0); 
+    c = r.insertCell(0);
+    c.innerHTML = 123;
+    c = r.insertCell(1);
+    c.innerHTML = 456;
+    document.getElementById("addtable").appendChild(t);
+}

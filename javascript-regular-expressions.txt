@@ -1,0 +1,204 @@
+http://www.javascriptkit.com/javatutors/re.shtml
+
+http://www.javascriptkit.com/javatutors/re2.shtml
+
+http://www.javascriptkit.com/javatutors/re3.shtml
+
+http://www.javascriptkit.com/javatutors/redev.shtml
+http://www.javascriptkit.com/javatutors/redev2.shtml
+
+http://www.w3schools.com/jsref/jsref_obj_regexp.asp
+
+=======================================
+
+So how are regular expressions implemented in JavaScript? There are two ways: 
+
+1) Using literal syntax.
+2) When you need to dynamically construct the regular expression, via the RegExp() constructor.
+
+
+Using literal syntax.
+
+var RegularExpression = /pattern/;
+
+while the RegExp() constructor method looks like
+
+var RegularExpression  =  new RegExp("pattern");
+str.match(new RegExp(pattern1+'|'+pattern2, 'gi'));
+
+=======================================
+
+Regular Expressions patterns
+----------------------------
+
+Escaping
+--------
+
+\ Escapes special characters to literal and literal characters to special.
+E.g: /\(s\)/ matches '(s)' while /(\s)/ matches any whitespace and captures the match.
+
+Quantifiers
+-----------
+
+{n}, {n,}, {n,m}, *, +, ?
+
+Quantifiers match the preceding subpattern a certain number of times.
+The subpattern can be a single character, an escape sequence,
+a pattern enclosed by parentheses or a character set.
+
+{n} matches exactly n times.
+{n,} matches n or more times.
+{n,m} matches n to m times.
+* is short for {0,}. Matches zero or more times.
++ is short for {1,}. Matches one or more times.
+? is short for {0,1}. Matches zero or one time.
+
+E.g: /o{1,3}/ matches 'oo' in "tooth" and 'o' in "nose".
+
+=======================================
+
+<script language="JavaScript1.2">
+function checkpostal(){
+var re5digit = /^\d{5}$/ //regular expression defining a 5 digit number
+if (document.myform.myinput.value.search(re5digit)==-1) //if match failed
+alert("Please enter a valid 5 digit number inside form")
+}
+</script>
+
+<form name="myform">
+<input type="text" name="myinput" size=15>
+<input type="button" onClick="checkpostal()" value="check">
+
+</form>
+
+=======================================
+
+String Methods Using Regular Expressions
+
+match( regular expression )
+// Executes a search for a match within a string based on a regular expression.
+// It returns an array of information or null if no match are found.
+// Note: Also updates the $1...$9 properties in the RegExp object.
+
+replace( regular expression, replacement text )
+// Searches and replaces the regular expression portion (match) with the replaced text instead.
+// Note: Also supports the replacement of regular expression with the specified RegExp $1...$9 properties.
+
+split ( string literal or regular expression )
+// Breaks up a string into an array of substrings based on a regular expression or fixed string.
+
+search( regular expression )
+// Tests for a match in a string. It returns the index of the match, or -1 if not found.
+// Does NOT support global searches (ie: "g" flag not supported).
+
+
+Here are a few examples:
+
+if ( buffer.search(/^\d+$/) < 0 ) {
+    alert("non numeric data detected");
+}
+
+var str = "Watch out for the rock!".match(/r?or?/g)
+
+// str then contains ["o","or","ro"]
+
+var string1 = "Peter has 8 dollars and Jane has 15"
+
+parsestring1 = string1.match(/\d+/g) //returns the array [8,15]
+
+var string2 = "(304)434-5454"
+
+parsestring2 = string2.replace(/[\(\)-]/g, "") //Returns "3044345454" (removes "(", ")", and "-")
+
+var string3 = "1,2, 3,  4,   5"
+
+parsestring3 = string3.split(/\s*,\s*/) //Returns the array ["1","2","3","4","5"]
+
+slashdot = ip_address_data.match(/<<(.*)>>/);
+alert("I found '" + slashdot[1] + "'");
+
+Delving deeper, you can actually use the replace() method to modify- and not simply
+replace- a substring. This is accomplished by using the $1...$9 properties of the RegExp object.
+These properties are populated with the contents of the portions of the searched string that
+matched the portions of the search pattern contained within parentheses.
+
+=======================================
+
+RegExp methods and properties
+
+test(string)
+// Tests a string for pattern matches. This method returns a Boolean that indicates whether
+// or not the specified pattern exists within the searched string. This is the most commonly
+// used method for validation. It updates some of the properties of the parent RegExp object
+// following a successful search.
+
+exec(string)
+// Executes a search for a pattern within a string. If the pattern is not found, exec() returns
+// a null value. If it finds one or more matches it returns an array of the match results.
+// It also updates some of the properties of the parent RegExp object.
+
+RegExp instance properties
+
+$n
+// n represents a number from 1 to 9
+
+Stores the nine most recently memorized portions of a parenthesized match pattern.
+
+// For example, if the pattern used by a regular expression for the last match was
+// /(Hello)(\s+)(world)/ and the string being searched was /Hello world/ the contents of
+// RegExp.$2 would be all of the space characters between "Hello" and "world".
+
+source
+// Stores a copy of the regular expression pattern
+
+global
+// Read-only Boolean property indicating whether the regular expression has a "g" flag
+
+ignoreCase
+// Read-only Boolean property indicating whether the regular expression has a "i" flag
+
+lastIndex
+// Stores the beginning character position of the last successful match found in the
+// searched string. If no match was found, the lastIndex property is set to -1.
+
+=======================================
+
+if ( line.search(new RegExp(pattern, 'gi')) >= 0 ) {
+}
+
+var str="test", pattern=new RegExp("te", "gi");
+
+pattern.lastIndex; // => 0, since it hasn't found any matches yet.
+pattern.test(str); // => true, since it matches at position "0".
+pattern.lastIndex; // => 2, since the last match ended at position "1".
+pattern.test(str); // => false, since there is no match after position "2".
+
+=======================================
+
+// ip address validation
+
+    octets = ip_address.value.split(".");
+    count = octets.length;
+    if ( count != 4 ) {
+        alert("Invalid number of octets specified for IP Address");
+        return false;
+    }
+    for ( index = 0 ; index <= 3 ; ++index ) {
+        number = octets[index].search(/^[0-9][0-9]*$/);
+        if ( number < 0 ) { 
+            alert("Non numeric data in " + titles[index] + " octet");
+            return false;
+        }       
+        number = parseInt(octets[index],10);
+        if ( number < 0 || number > 255 ) { 
+            alert("Value of " + titles[index] + " octet is out of range");
+            return false;
+        }       
+    } // FOR
+
+=======================================
+
+// optional element in regexp
+
+https? will match http and https
+

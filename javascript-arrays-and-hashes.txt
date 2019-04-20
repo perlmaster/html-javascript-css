@@ -1,0 +1,190 @@
+
+Information of Javascript arrays
+
+=========================================================
+
+// arrays
+
+var mylist = new Array();
+mylist[0] = 'one';
+mylist[1] = '2nd';
+len = mylist.length;
+index = mylist.indexOf("something");
+mylist.slice(1,3);  // extract 2 elements
+mylist.unshift("...");  // add to beginning of array
+mylist.push("..."); // add to end of array
+mylist.pop();  // remove last element
+mylist.shift(); // remove 1st element
+string = mylist.join();
+mylist.toString();  // convert all elements into a single string
+
+=========================================================
+
+// hash tables
+
+var myArray = new Array();
+myArray['one'] = 1;
+myArray['two'] = 2;
+myArray['three'] = 3;
+
+// show the values stored
+for (var i in myArray) {
+	alert('key is: ' + i + ', value is: ' + myArray[i]);
+}
+
+document.forms['theForm']
+document.forms.theForm
+
+var hashPetName = new Object(); 
+hashPetName["dog"] = "Rex"; 
+hashPetName["cat"] = "Mistigri"; 
+
+var hashPetName = { 
+  dog: "Rex", 
+  cat: "Mistigri" 
+} 
+
+console.log("My dog’s name is " + hashPetName["dog"] 
+        + " and my cat’s name is " + hashPetName["cat"] ); 
+
+var obj = { key: undefined };\
+obj["key"] != undefined // false, but the key exists!
+"key" in obj // true, regardless of the actual value
+
+var h = new Object(); // or just {}
+h['one'] = 1;
+h['two'] = 2;
+h['three'] = 3;
+
+// show the values stored
+for (var k in h) {
+    // use hasOwnProperty to filter out keys from the Object.prototype
+    if (h.hasOwnProperty(k)) {
+        alert('key is: ' + k + ', value is: ' + h[k]);
+    }
+}
+
+alert('size of hash table ' + h.length);
+
+// check if hash key exists
+"key" in obj // true, regardless of the actual value
+!("key" in obj) // true if "key" doesn't exist in object
+!"key" in obj   // ERROR!  Equivalent to "false in obj"
+
+
+=========================================================
+
+// copying an array
+
+var foo = [1, 2, 3];
+var bar = foo.slice(0);  // return a slice of the array from element 0 to the end
+
+var oldArray = ["mip", "map", "mop"];
+var newArray = oldArray.slice();
+
+=========================================================
+
+// create an HTML table from an array??
+
+function CreateCustomersTable(result) {
+    var table = document.createElement('table');
+    var str = '<table>'; 
+    str += '<tr><th>Id</th><th>Name</th></tr>';
+    for ( var i=0; i< result.length; i++){
+        str += '<tr><td>' + result[i].CustomerId + '</td><td>' + result[i].Name + '</td></tr>';
+    }
+    str += '</table>';
+    return str;    
+}
+
+var existingDiv = document.getElementById('Id of an existing Div');
+existingDiv.innerHTML = CreateCustomersTable(result);
+
+=========================================================
+
+// create an HTML table from an array (bad ??)
+
+var container = document.getElementById('container');
+var table = document.createElement('table');
+var baseRow = document.createElement('tr');
+var baseCell = document.createElement('td');
+
+for(var i = 0; i < results.length; i++){
+  //Create a new row
+  var myRow = baseRow.cloneNode(false);
+
+  //Create a new cell, you could loop this for multiple cells
+  var myCell = baseCell.cloneNode(false);
+  myCell.innerHTML = result.value;
+
+  //Append new cell
+  myRow.appendChild(myCell);
+
+  //Append new row
+  table.appendChild(myRow);
+}
+
+container.appendChild(table);
+
+=========================================================
+
+// create an HTML table from an array
+
+function load()
+{
+    var alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+    var table =  document.createElement("table");
+    var i = 0;
+    for (var r = 0; r < 4; r++) {
+        var row = table.insertRow(r);
+        for (var c= 0; c < 4; c++) {
+            var cell = row.insertCell(c);
+            cell.appendChild(document.createTextNode(alphabet[i++]));
+        }
+    }
+
+    document.body.appendChild(table);
+}
+
+=========================================================
+
+// To get the array maximum value you could sort the array in descending order and get the first item:
+
+[267, 306, 108].sort(function(a,b){return b-a;})[0]
+
+=========================================================
+
+// pass array as a function call parameter
+
+var x = [ 'p0', 'p1', 'p2' ]; 
+call_me(x)
+function call_me(params){
+  for(i=0;i<params.length;i++){
+    alert(params[i])
+  }
+}
+
+---------
+
+var x = [ 'p0', 'p1', 'p2' ];
+call_me.apply(this, x);
+
+=========================================================
+
+// remove an array element by index
+
+function removeByIndex(arr, index) {
+    arr.splice(index, 1);
+}
+ 
+test = new Array();
+test[0] = 'Apple';
+test[1] = 'Ball';
+test[2] = 'Cat';
+test[3] = 'Dog';
+ 
+alert("Array before removing elements: "+test);
+ 
+removeByIndex(test, 2);
+ 
+alert("Array after removing elements: "+test);

@@ -5,8 +5,6 @@
 //
 // Created   : February 11, 2014
 //
-// Purpose   : GENIE javascript support routines
-//
 
 //
 // Function  : please_confirm_request
